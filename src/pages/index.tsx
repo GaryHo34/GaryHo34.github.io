@@ -14,8 +14,8 @@ export default function Home() {
       </Head>
 
       <DefaultLayout>
-        {postList.map(post => (
-          <BlogCard key={post.id} post={post} />
+        {postList.map((post, idx) => (
+          <BlogCard key={post.id} post={post} id={idx} />
         ))}
       </DefaultLayout>
     </>

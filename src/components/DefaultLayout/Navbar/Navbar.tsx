@@ -45,7 +45,7 @@ export default function Navbar() {
           </FixedHeader>
         }
         <ButtonContainer>
-          <Button onClick={() => router.push('/blog')}> Blog</Button>
+          <Button onClick={() => router.push('/')}> Blog</Button>
           <Button onClick={() => router.push('/project')}> Project</Button>
           <Button onClick={() => router.push('/about')}> About</Button>
         </ButtonContainer>
