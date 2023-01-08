@@ -11,6 +11,9 @@ import {
 } from "./Navbar.styled"
 
 export default function Navbar() {
+  const router = useRouter()
+  const { id } = router.query
+  
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -25,7 +28,6 @@ export default function Navbar() {
     };
   }, []);
 
-  const router = useRouter();
   return (
     <HeaderContainer>
       <HeadBanner>

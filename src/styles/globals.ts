@@ -192,11 +192,8 @@ export const GlobalStyled = createGlobalStyle`
   }
   
   .markdown-body h1 {
-    margin: .67em 0;
     font-weight: 600;
-    padding-bottom: .3em;
     font-size: 2em;
-    border-bottom: 1px solid var(--color-border-muted);
   }
   
   .markdown-body mark {
@@ -379,9 +376,7 @@ export const GlobalStyled = createGlobalStyle`
   
   .markdown-body h2 {
     font-weight: 600;
-    padding-bottom: .3em;
     font-size: 1.5em;
-    border-bottom: 1px solid var(--color-border-muted);
   }
   
   .markdown-body h3 {

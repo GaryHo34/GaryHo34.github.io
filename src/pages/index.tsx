@@ -1,5 +1,7 @@
-import DefaultLayout from 'components/DefaultLayout';
+import BlogCard from 'components/BlogCard'
+import DefaultLayout from 'components/DefaultLayout'
 import Head from 'next/head'
+import { postList } from 'posts'
 
 export default function Home() {
   return (
@@ -11,10 +13,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico?" />
       </Head>
 
-      <DefaultLayout />
-      <div style={{height: 300, width: 20, backgroundColor: 'blue'}}></div>
-      <div style={{height: 300, width: 20, backgroundColor: 'red'}}></div>
-      <div style={{height: 300, width: 20, backgroundColor: 'yellow'}}></div>
+      <DefaultLayout>
+        {postList.map(post => (
+          <BlogCard key={post.id} post={post} />
+        ))}
+      </DefaultLayout>
     </>
   )
 }
