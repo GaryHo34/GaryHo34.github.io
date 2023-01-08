@@ -6,7 +6,7 @@ import BlogPost from 'components/BlogPost';
 export default function Blog() {
   const router = useRouter();
   const { id } = router.query;
-  const postId = Number(id)
+  const postId = Number(id ?? 0)
   return (
     <DefaultLayout>
       <BlogPost post={postList[postId]} />
