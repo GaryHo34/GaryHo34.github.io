@@ -3,29 +3,25 @@ import { Post } from "types";
 export const _20230108_: Post = {
     id: 1,
     date: '2023-01-08',
-    title: "First post",
+    title: "Understanding React useState",
     content: `
-# My first blog post.
+## React (re)renders your component when:
+- there is a state update scheduled by your component
+- including updates scheduled by custom hooks your component consumes
+    -   the parent component got rendered and your component doesn’t meet the criteria for **bailing out on re-rendering**, where **all these four conditions** have to be satisfied at the same time:
+        1.  Your component has been rendered before i.e. it already mounted
+        2.  No \`props\` (referentially) changed
+        3.  No any context value consumed by your component changed
+        4.  Your component itself didn’t schedule an update
+-   You probably shouldn’t need to worry about seemingly unnecessary re-renders until it becomes a performance issue. Check out the [flow chart](https://www.zhenghao.io/posts/react-rerender#the-flow-chart) I made for solutions you can adopt when a performance issue occurs.
 
+## useState
+first import useState \`import {useState} from React;\` then take instance:
+\`const [state, setState] = useState(initialState)\` 
+React will automatically set state to initialState.
 
-## Test the Style
+When ever we call setState, the component render!
 
-# h1
-## h2
-### h3
-#### h4
-##### h5
-
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
-
-* Lists
-* [ ] todo
-* [x] done
-        
-A table:
-        
-| a | b |
-| - | - |
-|123|456|
-`
+> DO NOT change state outside the setState function
+`,
 }

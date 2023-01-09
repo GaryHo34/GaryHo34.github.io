@@ -14,7 +14,7 @@ export default function BlogCard({
       <Title>{post.title}</Title>
       <Date><i>{post.date}</i></Date>
       <ReactMarkdown className='disable' remarkPlugins={[remarkGfm]}>
-        {`${post.content.substring(0, 20)}...`}
+        {`${post.content.substring(0, 30)}...`}
       </ReactMarkdown>
       <ReadButton onClick={() => router.push(`/blog/${id}`)}>Read</ReadButton>
     </Container>
